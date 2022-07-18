@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+		$('#menu>li:nth-child(2)').mouseover(function(){
+        $('#menu>li:nth-child(2) .sub2').stop().slideDown(500)
+     
+    })
+    $('#menu>li:nth-child(2)').mouseout(function(){
+        $('#menu>li:nth-child(2) .sub2').stop().slideUp(500)
+      
+    })
+    $('#menu>li:nth-child(3)').mouseover(function(){
+        $('#menu>li:nth-child(3) .sub3').stop().slideDown(500)
+     
+    })
+    $('#menu>li:nth-child(3)').mouseout(function(){
+        $('#menu>li:nth-child(3) .sub3').stop().slideUp(500)
+      
+    })
+    $('#menu>li:nth-child(4)').mouseover(function(){
+        $('#menu>li:nth-child(4) .sub4').stop().slideDown(500)
+     
+    })
+    $('#menu>li:nth-child(4)').mouseout(function(){
+        $('#menu>li:nth-child(4) .sub4').stop().slideUp(500)
+      
+    })
+    $('#menu>li:nth-child(5)').mouseover(function(){
+        $('#menu>li:nth-child(5) .sub5').stop().slideDown(500)
+     
+    })
+    $('#menu>li:nth-child(5)').mouseout(function(){
+        $('#menu>li:nth-child(5) .sub5').stop().slideUp(500)
+      
+    })
+    $('#menu>li:nth-child(6)').mouseover(function(){
+        $('#menu>li:nth-child(6) .sub6').stop().slideDown(500)
+     
+    })
+    $('#menu>li:nth-child(6)').mouseout(function(){
+        $('#menu>li:nth-child(6) .sub6').stop().slideUp(500)
+      
+    })
+
+
+    toggle = 0
+      $('#header1_box>ul>li:last-child').click(function(){      
+      
+        if(toggle==0){toggle=1;
+            $('#header_box').slideDown(200)
+        
+            $ ('#header1_box ul li:last-child img').attr({'src':'icons/btn_popup_close.png'}).css({'width':'22px'})
+        }
+        else if(toggle==1){toggle=0;
+           $('#header_box').hide()
+
+           $ ('#header1_box ul li:last-child img').attr({'src':'icons/ico_user_info_line.png'})
+        }
+    })
+
+
+
+    aa = 0
+      $('#header2_box>img').click(function(){
+
+        if(aa==0){aa=1;
+            $('#search').slideDown(500)
+            $ ('#header2_box>img').attr({'src':'icons/btn_popup_close.png'})
+        }
+        else if(aa==1){aa=0;
+           $('#search').slideUp(500)
+           $ ('#header2_box>img').attr({'src':'icons/ico_search.png'})
+        }
+
+    })
+
+    })
+
+       
+</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Nanum+Myeongjo&family=Tiro+Devanagari+Marathi&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+    <style>
+ * { margin: 0; padding:0; list-style: none; font-family:"stylesheet";}
+ #header_box button:nth-child(1) { background-color: white; width: 130px; height: 36px; border: none; margin-left: 100px;}
+ #header_box button:nth-child(2) { background-color: transparent; width: 130px; height: 36px; border: 1px solid white; color: white;}
+
+ #middle { width: 1200px; height: 110px; margin: auto;  line-height: 110px;}
+ #middle_left{ width: 700px; height: 110px; float: left; color: white;}
+ #middle_right{ width: 400px; height: 110px; float: left; }
+ header{border-bottom: 1px solid #ccc; position: fixed; width: 100%; left: 0; top: 0; z-index: 9999;}
+
+ #header_box{ width: 100%; height: 120px; background-color: #2f1c11; display: none;}
+
+ #header1 { width: 100%; height: 40px; background-color: #eee;}
+ #header2 { width: 100%; height: 100px;  background-color: white; position: relative;}
+ #search {width: 1258px; height: 80px; background-color: #eee; position: absolute; top: 100px; display: none;}
+ #search p { text-align: center; margin-top: 20px;}
+ #search img { float: right; margin-top: -20px; margin-right: 65px;}
+ #header1_box { width: 1210px; height: 40px; margin: auto; }
+ #header2_box { width: 1210px; height: 100px; ;margin: auto;}
+ #header1_box ul {  float: right;  line-height: 40px; }
+ #header1_box ul li {float:left ; margin-left: 15px; font-size: 13px;}
+ #header1_box ul li:last-child { width: 60px; height: 40px; background: #2f1c11 }
+ #header1_box ul li:last-child img { margin-left: 20px; margin-top: 10px;}
+    #header1_box ul li:first-child   {border-right: 1px solid gainsboro; padding-right: 17px;}
+
+    #header2_box #logo {width: 100px; height: 100px;  float: left;  line-height: 100px;}
+    #header2_box #logo>img {vertical-align: middle; margin-top: -10px;}
+    #header2_box #menu {width: 950px; height: 100px; ;float: left; margin-left: 50px; text-align: center;}
+    #header2_box #menu>li { display: inline-block; margin: 0 30px; line-height: 100px; font-size: 14px; font-weight: 700;}
+    #header2_box #menu>li:hover { color: #d4641a;}
+    #header2_box>img    {width: 20px; height: 20px;  float: right; vertical-align: middle; margin-top: 40px; margin-right: 20px;}
+	#menu>li .sub6 {display: none;  width: 200px; height: 235px; background-color: #eeee; position: absolute; left: 0; top: 100px; z-index: 9999; padding: 30px; line-height: 40px; }
+		#menu>li .sub6 li { color: #2f1c11; font-size: 12px; text-align: left; }
+        #menu>li { }
+        #menu>li .sub4 { display: none; width: 120px; height: 110px; background-color: #eeee; position: absolute; left: 0; top: 100px; z-index: 9999; padding: 30px; line-height: 40px; }
+		#menu>li .sub4 li { color: #2f1c11; font-size: 14px; text-align: left; }
+
+        #menu>li .sub2 {display: none; width: 450px; height: 200px;  background-color: #eee; position: absolute; left: -40px; top: 100px; z-index: 9999; padding: 30px; line-height: 40px;}
+        #box1 {width: 200px; height: 200px;  float: left;}
+        #box2 {width: 200px; height: 200px;  float: left;}
+        #menu>li .sub2 li { color: #2f1c11; font-size: 9px; text-align: left; }
+        #menu>li .sub2 h3 { color: black; font-size: 14px; text-align: left; }
+        #menu>li .sub5 { display: none; width: 950px; height: 200px;  background-color: #eee; position: absolute; left: -580px; top: 100px; z-index: 9999; padding: 30px; line-height: 40px;}
+        #fbox1 {width: 200px; height: 200px; ; float: left;}
+        #fbox2 {width: 200px; height: 200px;  float: left;}
+        #fbox3 {width: 200px; height: 200px;  float: left;}
+        #fbox4 {width: 200px; height: 200px;  float: left;}
+        #fbox5 {width: 100px; height: 200px;  float: left;}
+        #menu>li .sub5 li { color: #2f1c11; font-size: 9px; text-align: left; }
+        #menu>li .sub5 h3 { color: black; font-size: 13px; text-align: left; }
+
+        #menu>li .sub5 h4 { color: black; font-size: 14px; text-align: left;  }
+        #menu>li .sub3 { display: none; width: 810px; height: 330px;  background-color: #eee; position: absolute; left: -180px; top: 100px; z-index: 9999; padding: 30px; line-height: 40px;}
+        #mbox1 {width: 200px; height: 320px;  float: left;}
+        #mbox2 {width: 200px; height: 200px;  float: left;}
+        #mbox3 {width: 200px; height: 200px; float: left;}
+        #mbox4 {width: 200px; height: 200px;  float: left;}
+        #menu>li .sub3 li { color:#2f1c11; font-size: 9px; text-align: left; }
+        #menu>li .sub3 h3 { color: black; font-size: 14px; text-align: left; }
+     
+   #menu>li{ position: relative;}
+    #main_slide { width: 100%; height: 700px; background: white url(images/downloder2.jpg) center no-repeat ; margin-top: 140px;}
+    #banner { width: 100%; height: 400px; background: white url(images/downloder.jpg) center no-repeat;} 
+    #md_pick { width: 1000px; height: 580px;  background-color:  white; margin:auto; }
+    #md_pick h2 {width: 1000px; height: 135px; background-color: white; text-align: center; color: #d4641a;font-size: 45px;}
+    #md_pick ul { }
+    #md_pick ul li { width: 240px; height: 370px; background-color: white; float: left; margin:5px;}
+    #md_pick ul li img { width:100%; }
+    #md_pick ul li h3  {font-size: 16px; font-weight: 900;margin-top: 5px;}
+    #md_pick ul li h4  {font-size: 15px; font-weight: 400; margin-top: 5px;}
+    #md_pick ul li h5 { font-size: 14px;  color: #d4641a; font-weight: 400;margin-top: 5px;}
+    #md_pick_bt { width: 160px; height: 40px;   margin: 20px auto;}
+    #md_pick_bt li:nth-child(1) {  width: 60px; height: 40px;;float: left; border-right: 0.5px solid  rgba(121, 117, 141, 0.185);
+         box-sizing: border-box; text-align: center; line-height: 40px; }
+    #md_pick_bt li:nth-child(2) {  width: 100px; height: 40px;   float: right;  margin:auto; line-height: 40px; text-align: center;}
+
+    
+    #what_new { width: 1235px; height: 780px;   margin:auto; }
+  
+   #what_new h2 {height: 100px; line-height: 100px; color: #d4641a;font-size: 45px; text-align: center; line-height: 135px;}
+   #what_new ul li { width: 380px; height: 500px; margin: 16px; background-color: white; float: left; margin: auto; }
+   #what_new ul li img {vertical-align: middle; width: 100%;}
+   #what_new ul li h3  {font-size: 16px; margin-top: 15px;  color: #d4641a;  }
+
+
+   #what_bt { width: 160px; height: 40px;   margin: 20px auto;}
+    #what_bt li:nth-child(1) {  width: 60px; height: 40px;float: left; border-right: 1px solid  rgba(121, 117, 141, 0.185);
+         box-sizing: border-box; text-align: center; line-height: 40px; }
+    #what_bt li:nth-child(2) {  width: 100px; height: 4px;   float: right;  line-height: 40px; text-align: center;}
+
+
+    #sns { width: 100%; height: 620px; background-color: purple; margin-top:30px; text-align: center; clear: both;}
+    #sns h3 {  text-align: center; color: #ccc;        line-height: 80px; padding-top: 15px;  font-size: 24px;  font-weight: 400; }
+    #sns ul { width: 1200px; height: 400px;  margin: auto; }
+    #sns ul li {width: 200px; height: 200px;  float: left; overflow: hidden;}
+    #sns ul li img  {width: 100%; transition: 0.5s; opacity: 0.8; }
+    #sns button { width: 400px; height: 40px; background-color: #d4641a; color:white; margin-top:30px; border: none; }
+    #sns ul li img:hover {transform: scale(1.2 );  }
+    
+
+
+    #btn_top { position: fixed;right:50px;bottom: 100px;}
+    footer {width: 100%; height: 420px; background-color: white; }
+    #footer_box { width: 1200px; height: 420px; ; margin: auto; margin-top: 40px;}
+    #upbox { width: 1200px; height: 310px; }
+    #downbox {width: 1200px; height: 110px; border-top: 1px solid gray;}
+    #upbox ul { width: 150px; height: 200px;  float: left; margin-left: 50px; }
+    #upbox ul:nth-child(1){margin-left: 20px; }
+    #upbox ul>li:nth-child(1){color: #d4641a; font-weight: 800; }
+    #upbox ul>li:nth-child(2){margin-top: 20px; }
+    #upbox ul>li { color: #2f1c11; font-size: 13px;}
+    #footerleft { width: 900px; height: 110px; ; float: left; box-sizing: border-box; border: 1px solid #000;}
+    #footerright {width: 300px; height: 110px; border: 1px solid #000; float: left; box-sizing: border-box;}
+    #footerright img { margin-top: 30px; float: right; margin-left: 5px;}
+    #footer_cp {overflow: hidden; font-size: 12px; letter-spacing: -1px;}
+#footer_cp li { width: 49%; height: 24px; line-height: 24px; float: left; margin: 0.5%; }
+#footer_cp li:first-child {width: 99%;}
+#footer_cp li:last-child {width: 99%; margin-bottom: 85px;}
+
+    </style>
+</head>
+<body>
+    <header><div id="header_box"> <div id="middle">
+    <div id="middle_left"> <h3><span style="color: orange;">로그인</span> 을 하시면 커피빈 멤버스 클럽의 다양한<span style="color: orange;">혜택</span>을 받으실 수 있습니다</h3> </div>  <div id="middle_right">  <button>로그인</button> <button>회원가입</button></div> 
+    </div> </div>
+        <div id="header1"> 
+
+       
+            <div id="header1_box"> 
+    <ul>
+        <li>로그인  </li>
+        <li>매장찾기</li>
+        <li>채용정보</li>
+        <li>단체 및 기업구매</li>
+        <li>고객서비스</li>
+        <li>  <img src="icons/ico_user_info_line.png" alt=""></li>
+    </ul>
+    </div>
+    </div>
+
+        <div id="header2">  <div id="header2_box">
+            <h1 id="logo"> <img src="logo_new.jpg" alt=""> </h1>
+            <ul id="menu">
+                <li>BUY ONLINE</li>
+            <li>MEMER"S CLUB  <div class="sub2">
+                <ul id="box1">
+                    <h3>
+
+                        커피빈 멤버스 클럽</h3>
+                    <li>-멤버스 클럽</li>
+                    <li>-커피빈 카드</li>
+                    <li>-커피빈 e-Gift</li>
+                    <li>-나의 커피빈</li>
+                </ul>
+                <ul id="box2">
+                    <h3>
+                        나의 콩/e쿠폰보기</h3>
+                    <li>-나의 커피빈 카드</li>
+                    <li>-커피빈 카드 등록</li>
+                    <li>-분실신고/환불신청</li>
+                    <li>-e-Gift 구매
+                    </li>
+                </ul>
+            </div></li>
+            <li>MENU <div class="sub3">
+                <ul id="mbox1">
+                    <h3>
+
+                        커피빈 멤버스 클럽</h3>
+                    <li>-멤버스 클럽</li>
+                    <li>-커피빈 카드</li>
+                    <li>-커피빈 e-Gift</li>
+                    <li>-나의 커피빈</li>
+                    <li>-멤버스 클럽</li>
+                    <li>-커피빈 카드</li>
+                    <li>-커피빈 e-Gift</li>
+                    <li>-나의 커피빈</li>
+                </ul>
+                <ul id="mbox2">
+                    <h3>
+                        나의 콩/e쿠폰보기</h3>
+                    <li>-나의 커피빈 카드</li>
+                    <li>-커피빈 카드 등록</li>
+                    <li>-분실신고/환불신청</li>
+                    <li>-e-Gift 구매
+                    </li>
+                </ul>
+            
+                <ul id="mbox3">
+                    <h3>
+
+                        커피빈 멤버스 클럽</h3>
+                    <li>-멤버스 클럽</li>
+                    <li>-커피빈 카드</li>
+                    <li>-커피빈 e-Gift</li>
+                    <li>-나의 커피빈</li>
+                </ul>
+                <ul id="mbox4">
+                    <h3>
+
+                        커피빈 멤버스 클럽</h3>
+                    <li>-멤버스 클럽</li>
+                    <li>-커피빈 카드</li>
+                    <li>-커피빈 e-Gift</li>
+                    <li>-나의 커피빈</li>
+                </ul></li>
+            <li>STORE & 서비스 <div class="sub4">
+                <ul>
+                 
+              
+                    <li>  서비스신청</li>
+                    <li> 매장찾기</li>
+                    <li>신규매장</li>
+                </ul></li>
+            <li>COFFE BEAN<div class="sub5">
+                <ul id="fbox1">
+                    <h3>커피빈 코리아
+                       </h3>
+                    <li>-   Simply the Best</li>
+                    <li>-커피빈 커피와 티</li>
+                   
+                </ul>
+                <ul id="fbox2">
+                    <h3>커피빈 소식
+                        </h3>
+                    <li>-새소식</li>
+                    <li>-프로모션</li>
+                    <li>-공지사항</li>
+                    <li>-소셜미디어
+                    </li>
+                </ul>
+                <ul id="fbox3">
+                    <h3>사회공헌
+
+                        </h3>
+                    <li>-국제 사회공헌</li>
+                    <li>-필리핀 청소년 교육혜택 지원하기</li>
+                    <li>-성경원, 나눔의 샘 후원 결연</li>
+                 
+                </ul>
+                <ul id="fbox4">
+                    <h3>
+
+                        채용안내</h3>
+                    <li>-채용안내 바로가기</li>
+                    <li>-채용카테고리</li>
+                 
+        
+                </ul>
+                <ul id="fbox5">  <h4>신규 입점 제의</h4> 
+                <h4>결산공고
+                </h4></ul>
+              
+            </li>
+            <li>CBTL 
+                <div class="sub6">
+                <ul>
+                    <li>CBTL 가이드
+                       
+                      
+                      
+                       
+                        </li>
+                    <li> CBTL 서비스</li>
+                    <li>  AS 안내</li>
+                    <li>  AS 신청</li>
+                    <li> CBTL FAQ</li>
+                    <li>제품설명서</li>
+                </ul>
+            </div></li>
+
+            </ul>
+          
+            <img src="icons/ico_search.png" alt="">
+            <div id="search"> <p> 검색어를 입력하세요</p> <img src="icons/ico_search.png" alt=""></div>
+        </div></div>
+    </header>
+    <!-- main 슬라이드영역-->
+    <div id="main_slide"> </div>
+    <div id="banner"></div>
+    <div id="md_pick">
+
+    <h2> MD's PICK</h2>
+    <ul>
+    
+        <li>
+            <img src="images/송승현1 (1).jpg" alt="">
+        <h3> 커피빈 브렉퍼스트라뗴</h3>
+        <h4>신제품 출시 !</h4>
+        <h5>15000원</h5>
+    </li>
+        <li>
+            <img src="images/송승현1 (4).jpg" alt="">
+            <h3> 커피빈 바닐라 라떼</h3>
+            <h4>신제품 출시!</h4>
+            <h5> 15000원</h5>
+        </li>
+        <li>
+            <img src="images/송승현1 (3).jpg" alt="">
+        <h3>아이스박스 5.5L 크림옐로우</h3>
+        <h4></h4>
+        <h5>25000원</h5>
+        </li>
+
+        <li>
+            <img src="images/송승현1 (2).jpg" alt="">
+        <h3>아이스박스 5.5L 소프트퍼플</h3>
+        <h4></h4>
+        <h5>25000원</h5>
+        </li>
+    </ul>
+    </div>
+    <ul id="md_pick_bt">
+        <li><img src="icons/btn_pause.png" alt=""></li>
+        <li><img src="icons/paging_on.png"> <img src="icons/paging_on_popup.png" alt=""></li>
+    </ul>
+    <div id="what_new">
+ <h2>  what_new?</h2>
+ <ul>
+     <li>
+    <img src="PC_B_연출샷_47.jpg" alt="">
+    <h3>   맛있는 커피 </h3>
+     </li>
+
+     <li>
+ <img src="PC_B_연출샷_49.jpg" alt="">
+ <h3> black coffe</h3>
+     </li>
+
+     <li>
+      <img src="PC_B_331.jpg" alt="">
+      <h3> sweet coffe</h3>
+     </li>
+ </ul>
+
+
+    </div>
+    <ul id="what_bt">
+        <li><img src="icons/btn_pause.png" alt=""></li>
+        <li><img src="icons/paging_on.png"> <img src="icons/paging_on_popup.png" alt=""></li>
+    </ul>
+
+    <div id="sns">
+        <h3>#커피빈코리아 #커피빈맛있다 #커피빈사랑해 </h3>
+        <ul><li><img src="images/sns12.jpg" alt=""></li>
+        <li><img src="images/sns1.jpg" alt=""></li>
+        <li><img src="images/sns2.jpg" alt=""></li>
+        <li><img src="images/sns3.jpg" alt=""></li>
+        <li><img src="images/sns11.jpg" alt=""></li>
+        <li><img src="images/12500021.jpg" alt=""></li>
+        <li><img src="images/sns6.jpg" alt=""></li>
+        <li><img src="images/sns7.jpg" alt=""></li>
+        <li><img src="images/sns8.jpg" alt=""></li>
+        <li><img src="images/sns9.jpg" alt=""></li>
+        <li><img src="images/sns10.jpg" alt=""></li>
+        <li><img src="images/sns11.jpg" alt=""></li>
+        </ul>
+        <button> coffeebeanKOREA</button>
+    </div>
+
+
+    
+    <img src="icons/btn_top.png" alt="" id="btn_top">
+</body>
+<footer>
+ <div id="footer_box"> <div id="upbox"> 
+    <ul>
+    <li>Buy Online</li>
+    <li>VIEW ALL</li>
+    <li>커피</li>
+    <li>티</li>
+    <li>CBTL 시스템</li>
+    <li>상품
+    </li>
+ </ul>
+ <ul>
+    <li>
+        Member`s Club</li>
+    <li>커피빈 멤버스 클럽</li>
+    <li>나의 커피빈</li>
+
+ </ul>
+ <ul>
+    <li>Menu</li>
+    <li>음료</li>
+    <li>푸드</li>
+    <li>상품</li><li>카드</li>
+ </ul>
+ <ul>
+    <li>Store & 서비스</li>
+    <li>케이터링 서비스</li>
+    <li>매장 찾기</li>
+    <li>신규 매장</li>
+ </ul>
+ <ul>
+    <li>The Coffee Bean</li>
+    <li>커피빈 코리아</li>
+    <li>커피빈 소식</li>
+    <li>사회공헌</li>
+    <li>제휴 마케팅 제안</li>
+    <li>채용안내</li>
+    <li>신규 입점 제의</li>
+    <li>결산공고</li>
+ </ul>
+ <ul>
+    <li>CBTL</li>
+    <li>CBTL 가이드</li>
+    <li>CBTL 서비스</li>
+    <li>AS 안내</li>
+    <li>AS 신청</li>
+    <li>CBTL FAQ</li>
+    <li>제품설명서</li>
+ </ul> </div>
+  <div id="downbox">
+    <div id="footerleft">
+        <ul id="footer_cp">
+            <li>서울특별시 서초구 남부순환로 2620(양재동 11-149번지)</li>
+            <li>사업자 등록번호 : 303-81-09535</li>
+            <li>비알코리아(주) 대표이사 도세호</li>
+            <li>TEL : 080-555-3131</li>
+            <li>개인정보관리책임자 : 김경우</li>
+            <li>COPYRIGHT Ⓒ 2016 BRKOREA COMPANY. ALL RIGHTS RESERVED.</li>
+
+            </ul>
+
+    </div> 
+    <div id="footerright">
+        <img src="icons/ico_blog.png" alt="">
+        <img src="icons/ico_instagram.png" alt="">
+        <img src="icons/ico_twitter.png" alt="">
+        <img src="icons/ico_facebook.png" alt="">
+    </div>
+  </div>
+</div>
+</footer>
+</html>
